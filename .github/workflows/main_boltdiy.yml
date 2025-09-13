@@ -32,7 +32,7 @@ jobs:
           pnpm install --no-frozen-lockfile
 
       - name: Build project
-        run: pnpm run build
+        run: pnpm run build --if-present
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
@@ -67,4 +67,5 @@ jobs:
           app-name: 'BoltDIY'
           slot-name: 'Production'
           package: .
+
 
